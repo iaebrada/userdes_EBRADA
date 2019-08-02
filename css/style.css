@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto');
+
+body, html{
+  --project-backg : linear-gradient(to right top, #0519371f, #004d7a5e, #00879300, #00bf7236, #a8eb1200);
+  --contact-background:linear-gradient(to bottom, #8a740f21, #86412075, #82303066, #6f070700);
+  --graphic-background:#bba6a6;
+  background: #1d2c2f;
+  background-image: linear-gradient(to bottom, #7d0606, #872a01, #904400, #965b00, #9a7107, #9a7107, #9a7107, #9a7107, #965b00, #904400, #872a01, #7d0606);
+  color: blue;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration:none;
+  color: blue;
+}
+
+li{
+  margin: auto;
+}
+
+
+/*   ABOUT SECTION STYLING */
+.navigation-pane{
+  box-shadow: 0px 2px 40px -15px #000000;
+  color: white;
+  margin: 0px;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  top: 0px;
+}
+
+#navbar{
+  width: 50vw;
+  height: 70px;
+  position: relative;
+  float: right;
+  margin: auto;
+  padding-right:2%;
+  padding-left:5%;
+  display: grid;
+  grid-template-columns:30% 30% 30%;
+  grid-gap: 5%;    
+  background: black;
+  list-style:none;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+.nav-link{
+  font-size: 2vw;
+  -webkit-transition: font-size 100ms ease;
+  transition: font-size 100ms ease;
+}
+
+.nav-link:hover{
+  font-size: 2.4vw;
+}
+
+.welcome-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-intro {
+  width: 40vw;
+  height: 200px;
+  background: #000000cf;
+  z-index: 1;
+  position: relative;
+  top: 50%;
+  left: 32.5%;
+  transform: translate(-75%, -60%);
+}
+
+.intro-statement{
+  position: relative;
+  top: -20%;
+  left: 0%;
+  font-size: 11vw;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  mix-blend-mode: difference;
+}
+
+.detail {
+  width: 80%;
+  position:relative;
+  top: 23%;
+  left: 1%;
+  z-index: 1;
+  color: white;
+  mix-blend-mode: difference;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 1.5vw;
+}
+
+.subtitle {
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-gap: 3.5%;
+  margin-top: 0px;
+}
+
+.first-word{
+  text-align: right;
+}
+
+.intro-graphic{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #282631;
+  margin: auto;
+  clip-path: polygon(70% 20%, 75% 50%, 67% 75%, 75% 100%, 50% 100%, 60% 75%, 70% 50%, 65% 20%, 58% 0, 35% 0, 30% 23%, 33% 51%, 30% 73%, 34% 100%, 15% 100%, 19% 73%, 17% 50%, 21% 23%, 10% 0, 0 0, 0 28%, 0 66%, 0 100%, 100% 100%, 100% 0);
+  animation: color-in 6s;
+}
+
+@keyframes color-in{
+  0% {
+    background: #000;
+  }
+  50%{
+/*     background: #96989B; */
+    background: #bbb1b1;
+  }
+  75%{
+    background: #282631;
+  }
+}
+
+
+/*   PAGE TITLES STYLING */
+.section-title {
+  width: 4vw;
+  font-size: 6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-left: 1%;
+}
+
+
+/* WORK SECTION */
+.project-tile{
+  background: #00000047;
+  z-index: 1;
+}
+
+.vertical-bar {
+  background: black;
+  width: 5%;
+  height: 120%;
+  border-radius: 50px;
+  position: relative;
+  top: -10%;
+  z-index: 1;
+}
+
+.shape-graphic{
+  position: absolute;
+  width: 1.5vw;
+  left: 80%;
+  height: 100vh;
+  margin-top: -10%;
+  background: #c4a374;
+  border-radius: 50px;
+  z-index: 0;
+  display:none;
+}
+
+.content-tiles {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-row-gap: 2em;
+  padding-bottom: 8em;
+}
+  
+.project-tile{
+  width: 94%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+  
+.project-name{
+  width: 90%;
+  margin: auto;
+  position:relative;
+  left: 3%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vw;
+  letter-spacing: 0.5vw;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.project-tile:nth-child(odd) > .text-container {
+  flex-direction: row-reverse;
+  left: 3%;
+}
+
+.text-container {
+  width: 30%;
+  position: relative;
+  right: -3%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.img-container {
+  width: 60%;
+  margin: 2% 0%;
+  margin-top: 2%;
+}
+
+.img-container img {
+  width: 94%;
+  filter: grayscale(100%);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.img-container img:hover {
+  width: 98%;
+  filter: grayscale(0%);
+}
+
+
+/* CONTACT SECTION GENERAL STYLING */
+.side-graphic{
+  position: absolute;
+  width: 20%;
+  right: 80%;
+  height: 48%;
+  display: grid;
+  grid-template-rows: 15% 25% 25% 15%;
+  grid-row-gap:5%;
+  margin-top: -10%;
+  transform: rotateY(180deg);
+}
+
+.pair-lines {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+  
+.thick-line-graphic{
+  position:absolute;
+  width: 4%;
+  height: 70%;
+  left: 10%;
+  background: #271b19;
+  transform: rotate(40deg);
+  border-radius: 50px;
+  mix-blend-mode: exclusion;
+}
+  
+.thin-line-graphic{
+  position:absolute;
+  left:-30%;
+  width: 1%;
+  height: 80%;
+  background: #fff;
+  transform: rotate(40deg);
+  border-radius: 50px;
+  mix-blend-mode: exclusion;
+}
+
+.pair-lines:nth-child(odd) > *{
+  transform: rotate(-45deg);
+}
+
+.contact-view {
+  margin-bottom: 22vh;
+  height: 75vh;
+}
+
+.contact-container{
+  position: relative;
+  height: 85%;
+  width: 90%;
+  left: 10%;
+  top: -1%;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  letter-spacing: 0.1em;
+  z-index: 0;
+}
+  
+.contact-container h3{
+  width: 60%;
+  margin: auto;
+  margin-right: 5%;
+  color: white;
+  mix-blend-mode: difference;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-align: center;
+}
+  
+.external-profiles{
+  width: 75%;
+  height: 90%;
+  margin: 1% auto;
+  margin-right: 5%;
+  padding: 1% 0%;
+  display: grid;
+  grid-template-rows: 30% 30% 30%;
+  grid-template-columns: 100%;
+  background: #00000047;
+  background: var(--contact-background, #00000047);
+  grid-row-gap: 5%;
+  font-size: 1em;
+}
+  
+.contact-row{
+  width: 70%;
+  height: 30%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: 2% 2% 2% 20%;
+  font-size: 1em;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.contact-row span{
+  margin: auto;
+}
+
+.contact-icons {
+  max-width: 65px;
+}
+
+.contact-row:hover{
+  font-size: 1.2em;
+}
+
+
+/* FOOTER SECTION GENERAL STYLING*/
+footer {
+  width: 100%;
+  margin: auto;
+  text-align: right;
+  padding-top: 3%;
+  margin-left: -5%;
+  margin-bottom: 1%;
+}
+
+
+/* WIDTH ABOVE 800PX */
+@media all and (min-width: 801px){
+  .nav-link{
+    font-size: 1em;
+    -webkit-transition: font-size 300ms;
+  }
+  
+  .nav-link:hover{
+    font-size: 1.2em;
+    -webkit-transition: font-size 900ms;
+  }
+  
+  .intro-statement {
+    position: relative;
+    left: 0%;
+    font-size: 6em;
+  }
+  
+  .detail {
+    top: 24%;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+  }
+  
+/*   PAGE TITLES STYLING */
+  .section-title {
+    width: 40vw;
+    font-size: 6vw;
+  }
+     
+/*   WORK SECTION STYLING - WIDTH ABOVE 800PX */
+  .content-tiles{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 48% 48%;
+    grid-gap: 18% 3%;
+    padding-bottom: 8em;
+  }
+  
+  .shape-graphic{
+    height: 90vh;
+    width: 1vw;
+  }
+   
+  .project-name{
+    font-size: 1.4vw;
+    letter-spacing: 0.15em;
+  }
+     
+/*   nth-child(1) ORIGINALLY REVERSED above hence only 3 adjusted */
+  .project-tile:nth-child(2) > .text-container {
+    flex-direction: row-reverse;    
+  }
+  
+  .project-tile:nth-child(3), .project-tile:nth-child(4) {
+    flex-direction: row-reverse;
+    left: 3%;    
+  }
+  
+  .project-tile:nth-child(3) > .text-container , .project-tile:nth-child(4) > .text-container {
+    flex-direction: row;
+    left: -3%; 
+  }
+  
+  .project-tile:nth-child(3) .project-name, .project-tile:nth-child(4) .project-name {
+    left: -18%;
+    text-align: right;
+  }
+  
+  .project-tile:nth-child(3) .img-container,.project-tile:nth-child(4) .img-container {
+    margin: 2% 3%;
+  }
+  
+  /*   CONTACT STYLING - WIDTH ABOVE 800PX */
+  .contact-view {
+    margin-bottom: 22vh;
+    height: 75vh;
+  }
+  
+  .side-graphic{
+    margin-top: -5%; 
+  }
+        
+  .contact-container h3{
+    font-size: 2vw;
+  }
+  
+  .external-profiles{
+    font-size: 1.6vw;
+  }
+  
+  .contact-icons {
+    max-height: 30vh;
+    margin: 5%;
+    padding: 5%;
+    
+  }
+}
